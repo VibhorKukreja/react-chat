@@ -1,0 +1,121 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+.center {
+    margin: auto;
+    width: 50%;
+    border: 3px solid #5E6973;
+    height: 700px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.chat-view {
+    height: 650px;
+    overflow-x: scroll;
+}
+.chat-view div {
+    padding: 5px 10px 5px 10px;
+}
+
+.text-box {
+    position: relative;
+    bottom: 0px;
+    width: 100%;
+    height: 50px;
+}
+
+.text-box input {
+    background-color: #5E6973;
+    color: #87b7b6;
+    width: 100%;
+    height: 50px;
+    padding: 0;
+    border-width: 0;
+    border-style: none;
+    font-size: 25px;
+}
+
+span
+{
+    display: inline-block;
+    max-width: 200px;
+    background-color: white;
+    padding: 5px;
+    border-radius: 4px;
+    position: relative;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #5E6973;
+}
+
+
+span.left:after
+{
+    content: "";
+    display: inline-block;
+    position: absolute;
+    left: -8.5px;
+    top: 7px;
+    height: 0px;
+    width: 0px;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    border-right: 8px solid white;
+}
+
+span.left:before
+{
+    content: "";
+    display: inline-block;
+    position: absolute;
+    left: -9px;
+    top: 7px;
+    height: 0px;
+    width: 0px;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    border-right: 8px solid black;
+}
+
+span.right:after
+{
+    content: "";
+    display: inline-block;
+    position: absolute;
+    right: -8px;
+    top: 6px;
+    height: 0px;
+    width: 0px;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    border-left: 8px solid #dbedfe;
+}
+
+span.right:before
+{
+    content: "";
+    display: inline-block;
+    position: absolute;
+    right: -9px;
+    top: 6px;
+    height: 0px;
+    width: 0px;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    border-left: 8px solid black;
+}
+
+span.right
+{
+    float: right;
+    background-color: #dbedfe;
+}
+
+.clear
+{
+    clear: both;
+}
