@@ -18,7 +18,7 @@ const ChatView = React.createClass({
         "use strict";
         let props = this.props;
         return (<div className="chat-view" ref="chatView">
-            <div>Public chat room</div>
+            <h3>Public chat room</h3>
             {props.messages.map((_message, i) =>
                 <div key={i}>
                         <span className={_message.userID != socket.id ? "left" : "right"}>

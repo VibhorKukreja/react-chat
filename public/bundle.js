@@ -22292,14 +22292,6 @@ var _App = require('./components/App');
 
 var _App2 = _interopRequireDefault(_App);
 
-var _ChatView = require('./components/ChatView');
-
-var _ChatView2 = _interopRequireDefault(_ChatView);
-
-var _TextArea = require('./components/TextArea');
-
-var _TextArea2 = _interopRequireDefault(_TextArea);
-
 var _reactRedux = require('react-redux');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
@@ -22310,12 +22302,7 @@ function run() {
     _reactDom2.default.render(_react2.default.createElement(
         _reactRedux.Provider,
         { store: _store2.default },
-        _react2.default.createElement(
-            _App2.default,
-            null,
-            _react2.default.createElement(_ChatView2.default, null),
-            _react2.default.createElement(_TextArea2.default, null)
-        )
+        _react2.default.createElement(_App2.default, null)
     ), document.getElementById('root'));
 } /**
    * Created by Vibhor on 23/10/16.
@@ -22324,7 +22311,7 @@ function run() {
 
 run();
 
-},{"./components/App":201,"./components/ChatView":202,"./components/TextArea":203,"./store":206,"react":183,"react-dom":1,"react-redux":4}],201:[function(require,module,exports){
+},{"./components/App":201,"./store":206,"react":183,"react-dom":1,"react-redux":4}],201:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -22335,6 +22322,14 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
+var _ChatView = require('./ChatView');
+
+var _ChatView2 = _interopRequireDefault(_ChatView);
+
+var _TextArea = require('./TextArea');
+
+var _TextArea2 = _interopRequireDefault(_TextArea);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var App = function App(props) {
@@ -22343,13 +22338,14 @@ var App = function App(props) {
     return _react2.default.createElement(
         'div',
         { className: 'center' },
-        props.children
+        _react2.default.createElement(_ChatView2.default, null),
+        _react2.default.createElement(_TextArea2.default, null)
     );
 };
 
 exports.default = App;
 
-},{"react":183}],202:[function(require,module,exports){
+},{"./ChatView":202,"./TextArea":203,"react":183}],202:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -22395,7 +22391,7 @@ var ChatView = _react2.default.createClass({
             'div',
             { className: 'chat-view', ref: 'chatView' },
             _react2.default.createElement(
-                'div',
+                'h3',
                 null,
                 'Public chat room'
             ),

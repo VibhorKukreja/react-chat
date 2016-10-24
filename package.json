@@ -1,6 +1,7 @@
 {
   "scripts": {
     "build": "watchify src/app.js -o public/bundle.js -t [babelify --presets [ react es2015] ]",
+    "start": "node server/server.js & npm run server",
     "server": "cd public; lite-server --port=9000 --entry-file=index.html"
   },
   "dependencies": {
