@@ -1,4 +1,4 @@
-## Build the Build
+## Build the JS Bundle
 
 npm run build
 
