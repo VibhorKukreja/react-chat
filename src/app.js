@@ -7,19 +7,19 @@ import store from './store';
 import App from './components/App';
 import ChatView from './components/ChatView';
 import TextArea from './components/TextArea';
+import { Provider } from 'react-redux';
 
-store.subscribe(() => {
-    "use strict";
-    console.log(store.getState());
-    run();
-});
 
 function run() {
     "use strict";
-    let state = store.getState();
-    ReactDOM.render(<App>
-        <ChatView messages={state.messages}/>
-        <TextArea/>
-    </App>, document.getElementById('root'));
+    ReactDOM.render(
+        <Provider store={store}>
+            <App>
+                <ChatView/>
+                <TextArea/>
+            </App>
+        </Provider>
+        , document.getElementById('root'));
 }
+
 run();

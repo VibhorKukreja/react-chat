@@ -2,6 +2,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import socket  from './../socket';
+import { connect } from 'react-redux';
+
+const mapStateToProps = ({ messages }) => ({
+    messages
+});
 
 const ChatView = React.createClass({
     componentDidUpdate() {
@@ -26,4 +31,4 @@ const ChatView = React.createClass({
     }
 });
 
-export default ChatView;
+export default connect(mapStateToProps)(ChatView);
